@@ -22,6 +22,7 @@ nav a {
   padding: 10px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.3em;
   display: block;
 }
 
@@ -51,7 +52,7 @@ img{
 
 body{
   margin: 2% 5% 2% 5%;
-  margin-bottom: 15%;
+  margin-bottom: 1em;
   font-family: 'paralucent', sans-serif, 'Times New Roman';
   font-size: 1em;
   font-weight: 300;
@@ -62,7 +63,7 @@ body{
 
 .grid-container {
   grid-template-columns: 1fr; /* One column for mobile devices */
-  gap: 0;
+  gap: 2;
 }
 
 .grid-container > div {
@@ -94,11 +95,6 @@ h3{
   margin-bottom: 0em;
   margin-bottom: 10px;
   line-height: 1;
-}
-
-
-p{
-  margin-bottom: 2em;
 }
 
 
@@ -204,12 +200,12 @@ p{
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 6px;
-  top: 2px;
+  left: 5px;
+  top: 1px;
   width: 5px;
-  height: 9px;
+  height: 10px;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -259,6 +255,7 @@ p{
   }
 
 
+  /* styles all grids but the travel one */
   .grid-container { 
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
