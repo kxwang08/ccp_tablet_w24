@@ -1,17 +1,128 @@
-body{
-    margin: 2% 10% 2% 10%;
-    font-family: 'paralucent', sans-serif, 'Times New Roman';
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 2.0;
-    color: #333333;
-    background-color: #e6dee4;
+
+.skip-to-content{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
+.skip-to-content:focus{
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+nav {
+  text-align : left;
+}
+
+nav a {
+  color: #333333;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+nav a:hover {
+  color: #87005c;
+}
+
+/* styles links */
+a{
+text-decoration: none;
+color: #333333;
+}
+
+
+/* styles active links */
+.active {
+  text-decoration: underline;
+  }
+
+
 img{
-  width: 40%;
-  margin-bottom: 20px;
-  border:1px solid #333333;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  border: solid 1px;
+}
+
+body{
+  margin: 2% 5% 2% 5%;
+  margin-bottom: 15%;
+  font-family: 'paralucent', sans-serif, 'Times New Roman';
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 2.0;
+  color: #333333;
+  background-color: #e6dee4;
+}
+
+.grid-container {
+  grid-template-columns: 1fr; /* One column for mobile devices */
+  gap: 0;
+}
+
+.grid-container > div {
+  padding: 0; /* Reduced padding for grid items on mobile */
+  margin: 0;
+}
+
+
+h1{
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff70f1, 0 0 30px #ff70f1, 0 0 40px #ff70f1, 0 0 55px #ff70f1, 0 0 75px #ff70f1 */
+}
+
+
+h2{
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 2;
+}
+
+h3{
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0em;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+
+p{
+  margin-bottom: 2em;
+}
+
+
+.grid-container {
+  grid-template-columns: 1fr; /* One column for mobile devices */
+  gap: 0;
+}
+
+
+.grid-container > div {
+  padding: 0; /* Reduced padding for grid items on mobile */
+  margin: 0;
+}
+
+.grid-container img{ /* grid image */
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.gif-container {
+  display: block;
+  text-align: center;
 }
 
 .custom-ul {
@@ -25,200 +136,95 @@ img{
   margin-left:8%
 }
 
-.grid-container { /* grids */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
-  grid-gap: 30px; /* Gap between grid items */
-  align-items: left;
-}
-
-.grid-container img{ /* grid image */
-  width: 100%;
-  margin-top: 6px;
-  margin-bottom: 5px;
-}
-
-h1{
-  color: #333333;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 500;
-  line-height: 2.6;
-  text-align: left;
-}
-
-p{
-  margin-bottom: 1em;
-  /* display: grid; */
-  /* grid-template-columns: 70%; */
-}
-
-h2{
-    font-size: 1.9em;
-    font-weight: 500;
-    line-height: 2.5;
-}
-
-h3{
-    font-size: 1.4em;
-    font-weight: 500;
-    line-height: 1.4;
-    /* padding: 2em, 0, 0.5em, 0; Top, right, bottom, left */
-}
-
-.skip-to-content {
-    /* Visually hide the link */
-    position: fixed;
-    left: -9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-
-/* nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex; /* Use flexbox for horizontal layout */
-
-
-nav {
-  margin: 3% 0 6% 0;
-  font-size: 1.4em;
-  overflow: hidden;
-  font-weight: 500;
-  }
-
-
-.nav-item{
-  list-style-type: none;
-  padding: 0;
-  margin-top: 8%;
-  margin: 0;
+.map-container {
   display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+
+
+
+/* A media query to target users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  /* Hide GIFs or other animations */
+  .gif-container {
+      display: none;
   }
-
-.nav-item li {
-    margin-right: 20px; /* Add margin to the right of each list item */
 }
-
-a{
-  text-decoration: none;
-  color: #333333;
-}
-
-/* nav li a:hover {
-  color: #2e176f;
-} */
-
-
-nav li a:hover {
-  color: #87005c;
-}
-
-.active {
-  text-decoration: underline;
-}
-
-
-.gif-container {
-  display: block;
-  text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
   /* Media query for responsiveness */
-  @media screen and (max-width: 400px) {
-
-    body{
-      margin: 2% 5% 2% 5%;
-      margin-bottom: 15%
-    }
-
-    .grid-container {
-      grid-template-columns: 1fr; /* One column for mobile devices */
-      gap: 0;
-    }
-
-    .grid-container > div {
-      padding: 0; /* Reduced padding for grid items on mobile */
-      margin: 0;
-    }
-
-    nav{
-      padding-top: 10%;
-      font-size: 1.1em;
-      line-height: 2.3em;
-      border-radius: 15px;
-    }
-
-    img{
-      width: 100%;
-      margin-top: 6px;
-      margin-bottom: 5px;
-    }
-
-    ul {
-      flex-direction: column; /* Stack items vertically */
-    }
-
-    li {
-      width: 100%; /* Make each list item full-width */
-
-    }
-
-    li a {
-      text-align: left; /* Align text to the left */
-    }
-
-    h1{
-      font-size: 2em;
-      text-align: center;
-      font-weight: 600;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      line-height: 1.5;
-    }
-
-    h2{
-      font-size: 1.5em;
-      font-weight: 600;
-      line-height: 2;
-    }
-
-    h3{
-      font-size: 1.3em;
-      font-weight: 600;
-      margin-bottom: 0em;
-      margin-bottom: 10px;
-      line-height: 1;
-    }
-
-    p{
-      margin-bottom: 1em;
-    }
+@media (min-width: 768px) {
 
 
-/* A media query to target users who prefer reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    /* Hide GIFs or other animations */
-    .gif-container {
-        display: none;
-    }
+  h1{
+    font-size: 2em;
   }
+
+  h2{
+    font-size: 1.6em;
+  }
+
+  h3{
+    font-size: 1.3em;
+  }
+
+  body{
+    margin: 5% 10% 2% 10%;
+    margin-bottom: 15%;
+    font-size: 1.1em;
+  }
+
+
+  .grid-container { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    grid-gap: 30px; /* Gap between grid items */
+    align-items: left;
+  }
+  
+  img{
+    width: 40%;
+    margin-bottom: 20px;
+    border:1px solid #333333;
+  }
+
+  .travel-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .travel-grid > div {
+    margin: 10px;
+    flex-grow: 1; /* Ability to grow and fill other grid*/
+    flex-shrink: 0; /* Ability to shrink */
+    flex-basis: 30%; /* Initial size */
+    /* flex: 1 0 30%; this is shorthand */
+  }
+
+  .travel-grid img {
+    width: 100%;
+  }
+
+
 }
+
+
+
+
+/* for the future, to make nav inline */
+/* @media (min0wdith: 900px);
+  nav{
+    text-align : left;
+    display: flex;
+}
+
+/* adds space between nav elements "a" targets the links in navigation */
+/* nav a {
+  margin-right: 20px;
+} */
